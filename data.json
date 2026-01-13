@@ -1,0 +1,12 @@
+[
+  {
+    "title": "언론사 첫 번째 홍보 기사 제목",
+    "link": "https://www.example.com/article1",
+    "thumbnail": "https://via.placeholder.com/150"
+  },
+  {
+    "title": "언론사 두 번째 홍보 기사 제목",
+    "link": "https://www.example.com/article2",
+    "thumbnail": "https://via.placeholder.com/150"
+  }
+]
