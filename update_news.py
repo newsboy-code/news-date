@@ -2,67 +2,66 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
-def get_koreawho_news():
-    url = "https://www.koreawho.com/"
+def get_koreawho_profiles():
+    # 정확히 찾아주신 jsp 목록 페이지 주소
+    url = "https://www.koreawho.com/profile_list.jsp" 
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
     
     try:
         response = requests.get(url, headers=headers, timeout=30)
-        response.encoding = 'utf-8'
+        response.encoding = 'utf-8' # 한글 깨짐 방지
         soup = BeautifulSoup(response.text, 'html.parser')
         articles = []
         
-        # 'item' 클래스나 'h2' 태그를 포함한 링크 위주로 탐색
-        items = soup.find_all(['div', 'li'], class_=['item', 'list-item', 'article'])
-        
-        # 만약 아이템 그룹을 못 찾으면 모든 a 태그에서 기사처럼 보이는 것 추출
-        if not items:
-            items = soup.find_all('a', href=True)
+        # JSP 목록 페이지는 보통 <table> 또는 <div> 안에 반복되는 구조를 가집니다.
+        # 모든 a 태그를 뒤져서 프로필 상세 주소를 찾습니다.
+        all_links = soup.find_all('a', href=True)
 
-        for item in items:
-            try:
-                # a 태그 찾기
-                a_tag = item if item.name == 'a' else item.find('a')
-                if not a_tag or not a_tag.get('href'): continue
+        for a in all_links:
+            href = a['href']
+            # 프로필 상세 페이지 패턴 (예: profile_view.jsp 등)을 찾습니다.
+            if 'profile' in href or 'view' in href:
+                title = a.get_text(strip=True)
                 
-                link = a_tag['href']
-                if 'view.php' not in link and '/news/' not in link: continue # 기사 링크 형태만 필터링
+                # 이름이 너무 짧으면 패스 (보통 인물명은 2자 이상)
+                if len(title) < 2: continue
                 
-                if not link.startswith('http'):
-                    link = "https://www.koreawho.com" + link
+                # 주소 완성
+                link = href if href.startswith('http') else "https://www.koreawho.com/" + href.lstrip('/')
                 
-                title = a_tag.text.strip()
-                if len(title) < 10: continue # 너무 짧은 텍스트 제외
-
-                img_tag = item.find('img') if item.name != 'a' else item.find_previous('img')
+                # 근처에 있는 이미지(증명사진 등) 찾기
+                # 보통 a태그 안이나 바로 옆에 img 태그가 있습니다.
+                img_tag = a.find('img') or (a.parent.find('img') if a.parent else None)
                 thumb = ""
                 if img_tag:
                     thumb = img_tag.get('src') or img_tag.get('data-src')
                     if thumb and not thumb.startswith('http'):
-                        thumb = "https://www.koreawho.com" + thumb
+                        thumb = "https://www.koreawho.com/" + thumb.lstrip('/')
 
+                # 중복 데이터 방지
                 if not any(obj['link'] == link for obj in articles):
                     articles.append({
                         "title": title,
                         "link": link,
                         "thumbnail": thumb or "https://www.koreawho.com/favicon.ico"
                     })
-            except:
-                continue
-            if len(articles) >= 15: break
+            
+            if len(articles) >= 20: break # 상위 20명만
                 
         return articles
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"오류 발생: {e}")
         return []
 
-# 실행 및 강제 출력
-data = get_koreawho_news()
-print(f"### RESULT_START ###")
-print(f"추출된 기사 개수: {len(data)}")
-print(f"### RESULT_END ###")
+# 데이터 실행 및 출력
+data = get_koreawho_profiles()
+print(f"--- 결과 리포트 ---")
+print(f"찾은 데이터 개수: {len(data)}")
+if len(data) > 0:
+    print(f"첫 번째 데이터 예시: {data[0]['title']}")
+print(f"------------------")
 
 with open('data.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
