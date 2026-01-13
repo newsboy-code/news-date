@@ -15,32 +15,34 @@ def get_koreawho_data():
         soup = BeautifulSoup(response.text, 'html.parser')
         articles = []
         
-        # 모든 링크 탐색
         all_links = soup.find_all('a', href=True)
 
         for a in all_links:
             href = a['href']
-            title = a.get_text(strip=True)
+            title = a.get_text(" ", strip=True) # 태그 간 공백 추가하여 이름 붙음 방지
             
-            # 1. 뉴스 기사 링크 (javascript 형태) 변환
-            # 예: javascript:article_view('7561') -> https://www.koreawho.com/news/view.php?idx=7561
+            # 1. 뉴스 기사 링크 처리 (javascript)
             js_match = re.search(r"article_view\('(\d+)'\)", href)
             if js_match:
                 idx = js_match.group(1)
                 link = f"https://www.koreawho.com/news/view.php?idx={idx}"
             
-            # 2. 프로필 링크 변환
+            # 2. 프로필 링크 처리 (중첩 방지 로직 추가)
             elif '/profile/' in href:
-                link = "https://www.koreawho.com" + href if href.startswith('/') else "https://www.koreawho.com/" + href
+                # 이미 http가 포함되어 있다면 그대로 사용, 아니면 붙여주기
+                if href.startswith('http'):
+                    link = href
+                else:
+                    link = "https://www.koreawho.com/" + href.lstrip('/')
             
             else:
-                continue # 그 외 잡다한 링크는 무시
+                continue
 
-            # 제목 정제 및 짧은 제목 제외
+            # 불필요한 단어 및 짧은 제목 정제
             title = title.replace('•', '').strip()
-            if len(title) < 5 or title == "PROFILE": continue
+            if len(title) < 5 or title.upper() == "PROFILE": continue
 
-            # 이미지 찾기
+            # 이미지 추출
             img_tag = a.find('img') or (a.parent.find('img') if a.parent else None)
             thumb = ""
             if img_tag:
@@ -62,9 +64,6 @@ def get_koreawho_data():
         print(f"Error: {e}")
         return []
 
-# 데이터 실행 및 저장
 data = get_koreawho_data()
-print(f"총 {len(data)}개의 유효한 링크를 생성했습니다.")
-
 with open('data.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
