@@ -1,5 +1,30 @@
 [
   {
+    "title": "CEO of HVM Moon Seung-ho",
+    "link": "https://www.koreawho.com/profile/MoonSeung-ho",
+    "thumbnail": "https://www.koreawho.com/favicon.ico"
+  },
+  {
+    "title": "Floor Leader of the Democratic Party of Korea Han Byung-do",
+    "link": "https://www.koreawho.com/profile/HanByung-do",
+    "thumbnail": "https://www.koreawho.com/favicon.ico"
+  },
+  {
+    "title": "CEO of the Construction Division at Samsung C&T Oh Se-chul",
+    "link": "https://www.koreawho.com/profile/OhSe-chul",
+    "thumbnail": "https://www.koreawho.com/favicon.ico"
+  },
+  {
+    "title": "Samsung C&T's Urban Redevelopment Wins Near Last Year's Total—Oh Se-chul Aims for 'Raemian' Dominance",
+    "link": "https://www.koreawho.com/news/view.php?idx=7415",
+    "thumbnail": "https://www.koreawho.com/favicon.ico"
+  },
+  {
+    "title": "Samsung C&T Expands Into Energy, Oh Se-chul Reduces Reliance on Samsung Electronics",
+    "link": "https://www.koreawho.com/news/view.php?idx=7395",
+    "thumbnail": "https://www.koreawho.com/favicon.ico"
+  },
+  {
     "title": "President of Sangmyung University Kim Chong-hee",
     "link": "https://www.koreawho.com/profile/KimChong-hee",
     "thumbnail": "https://www.koreawho.com/favicon.ico"
@@ -32,36 +57,6 @@
   {
     "title": "CEO of Hanwha Engine Kim Jong-seo",
     "link": "https://www.koreawho.com/profile/KimJong-seo",
-    "thumbnail": "https://www.koreawho.com/favicon.ico"
-  },
-  {
-    "title": "CEO of Naver Choi Soo-yeon",
-    "link": "https://www.koreawho.com/profile/ChoiSoo-yeon",
-    "thumbnail": "https://www.koreawho.com/favicon.ico"
-  },
-  {
-    "title": "Lee Hae-jin’s Return to Naver Boosts Choi Soo-yeon — The Era of ‘Lee Hae-jin Kids’ Begins",
-    "link": "https://www.koreawho.com/news/view.php?idx=7624",
-    "thumbnail": "https://www.koreawho.com/favicon.ico"
-  },
-  {
-    "title": "Naver Launches AI-Powered, Same-Day Delivery Shopping App—E-commerce Battle Heats Up Against Coupang",
-    "link": "https://www.koreawho.com/news/view.php?idx=7527",
-    "thumbnail": "https://www.koreawho.com/favicon.ico"
-  },
-  {
-    "title": "CEO of Doosan Tesna Kim Yoon-gun",
-    "link": "https://www.koreawho.com/profile/KimYoon-gun",
-    "thumbnail": "https://www.koreawho.com/favicon.ico"
-  },
-  {
-    "title": "CEO of Woori Bank Jung Jin-wan",
-    "link": "https://www.koreawho.com/profile/JungJin-wan",
-    "thumbnail": "https://www.koreawho.com/favicon.ico"
-  },
-  {
-    "title": "Factional Conflict at Woori Bank—Yim Jong-ryong Taps Jung Jin-wan to Lead Integration Era",
-    "link": "https://www.koreawho.com/news/view.php?idx=7819",
     "thumbnail": "https://www.koreawho.com/favicon.ico"
   }
 ]
