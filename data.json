@@ -1,7 +1,17 @@
 [
   {
+    "title": "CEO and President of Lotte Rental Choi Jin-hwan",
+    "link": "https://www.koreawho.com/profile/ChoiJin-hwan",
+    "thumbnail": "https://www.koreawho.com/favicon.ico"
+  },
+  {
     "title": "CEO of Samyang Biopharm Kim Kyung-jin",
     "link": "https://www.koreawho.com/profile/KimKyung-jin",
+    "thumbnail": "https://www.koreawho.com/favicon.ico"
+  },
+  {
+    "title": "Chairwoman of Hyundai Group Hyun Jeong-eun",
+    "link": "https://www.koreawho.com/profile/HyunJeong-eun",
     "thumbnail": "https://www.koreawho.com/favicon.ico"
   },
   {
@@ -57,16 +67,6 @@
   {
     "title": "CEO of Hyundai Glovis Lee Kyoo-bok",
     "link": "https://www.koreawho.com/profile/LeeKyoo-bok",
-    "thumbnail": "https://www.koreawho.com/favicon.ico"
-  },
-  {
-    "title": "CEO and Vice Chairman of Korea Circuit Jang Se-jun",
-    "link": "https://www.koreawho.com/profile/JangSe-jun",
-    "thumbnail": "https://www.koreawho.com/favicon.ico"
-  },
-  {
-    "title": "CEO of JW Pharmaceutical Shin Young-seop",
-    "link": "https://www.koreawho.com/profile/ShinYoung-seop",
     "thumbnail": "https://www.koreawho.com/favicon.ico"
   }
 ]
