@@ -1,5 +1,10 @@
 [
   {
+    "title": "CEO of Cosmo Robotics Oh Joo-young",
+    "link": "https://www.koreawho.com/profile/OhJoo-young",
+    "thumbnail": "https://www.koreawho.com/favicon.ico"
+  },
+  {
     "title": "Vice Chairman and CEO of KC Tech Yang Ho-keun",
     "link": "https://www.koreawho.com/profile/YangHo-keun",
     "thumbnail": "https://www.koreawho.com/favicon.ico"
@@ -7,6 +12,11 @@
   {
     "title": "President of Gyeongguk National University Jeong Tae-ju",
     "link": "https://www.koreawho.com/profile/JeongTae-ju",
+    "thumbnail": "https://www.koreawho.com/favicon.ico"
+  },
+  {
+    "title": "floor leader of the People Power Party Jeong Jeom-sig",
+    "link": "https://www.koreawho.com/profile/JeongJeom-sig",
     "thumbnail": "https://www.koreawho.com/favicon.ico"
   },
   {
@@ -37,16 +47,6 @@
   {
     "title": "Daesung Group Chairman Kim Young-hoon",
     "link": "https://www.koreawho.com/profile/KimYoung-hoon",
-    "thumbnail": "https://www.koreawho.com/favicon.ico"
-  },
-  {
-    "title": "President of Changwon National University Park Min-won",
-    "link": "https://www.koreawho.com/profile/ParkMin-won",
-    "thumbnail": "https://www.koreawho.com/favicon.ico"
-  },
-  {
-    "title": "CEO of Korea PIM Song Jun-ho",
-    "link": "https://www.koreawho.com/profile/SongJun-ho",
     "thumbnail": "https://www.koreawho.com/favicon.ico"
   }
 ]
