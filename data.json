@@ -1,5 +1,15 @@
 [
   {
+    "title": "CEO of Intekplus Lee Sang-yoon",
+    "link": "https://www.koreawho.com/profile/LeeSang-yoon",
+    "thumbnail": "https://www.koreawho.com/favicon.ico"
+  },
+  {
+    "title": "CEO of Kolon Life Science Lee Han-kuk",
+    "link": "https://www.koreawho.com/profile/LeeHan-kuk",
+    "thumbnail": "https://www.koreawho.com/favicon.ico"
+  },
+  {
     "title": "Chair of the Yonsei University Foundation and Honorary Chairman of GS Caltex Hur Dong-soo",
     "link": "https://www.koreawho.com/profile/HurDong-soo",
     "thumbnail": "https://www.koreawho.com/favicon.ico"
@@ -42,16 +52,6 @@
   {
     "title": "Chairman and CEO of DI Dong-il Suh Tae-won",
     "link": "https://www.koreawho.com/profile/SuhTae-won",
-    "thumbnail": "https://www.koreawho.com/favicon.ico"
-  },
-  {
-    "title": "CEO of Cosmo Robotics Oh Joo-young",
-    "link": "https://www.koreawho.com/profile/OhJoo-young",
-    "thumbnail": "https://www.koreawho.com/favicon.ico"
-  },
-  {
-    "title": "Chairman of SNT Holdings Choi Pyung-kyu",
-    "link": "https://www.koreawho.com/profile/ChoiPyung-kyu",
     "thumbnail": "https://www.koreawho.com/favicon.ico"
   }
 ]
