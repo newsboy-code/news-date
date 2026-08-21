@@ -1,5 +1,15 @@
 [
   {
+    "title": "CEO of Hyundai Transys Baek Cheol-seung",
+    "link": "https://www.koreawho.com/profile/BaekCheol-seung",
+    "thumbnail": "https://www.koreawho.com/favicon.ico"
+  },
+  {
+    "title": "CEO of HanaTour Cho Jwa-jin",
+    "link": "https://www.koreawho.com/profile/ChoJwa-jin",
+    "thumbnail": "https://www.koreawho.com/favicon.ico"
+  },
+  {
     "title": "Chairman of the Hanyang University Foundation Kim Chong-yang",
     "link": "https://www.koreawho.com/profile/KimChong-yang",
     "thumbnail": "https://www.koreawho.com/favicon.ico"
@@ -47,16 +57,6 @@
   {
     "title": "CEO and President of POSCO E&C Song Chi-young",
     "link": "https://www.koreawho.com/profile/SongChi-young",
-    "thumbnail": "https://www.koreawho.com/favicon.ico"
-  },
-  {
-    "title": "President and CEO of Korea Southern Power Kim Jun-dong",
-    "link": "https://www.koreawho.com/profile/KimJun-dong",
-    "thumbnail": "https://www.koreawho.com/favicon.ico"
-  },
-  {
-    "title": "Vice Chairman and CEO of BHI Lee Geun-heung",
-    "link": "https://www.koreawho.com/profile/LeeGeun-heung",
     "thumbnail": "https://www.koreawho.com/favicon.ico"
   }
 ]
